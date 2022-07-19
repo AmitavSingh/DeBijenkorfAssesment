@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol ProductListViewModelDelegate {
+    func didReceiveProductList(response: ProductSearchReposne)
+}
+
 class ProductListViewModel {
     
     let searchText: String
+    var productData : ProductSearchReposne?
+    var delegate : ProductListViewModelDelegate?
+
 
     init(searchText: String){
         self.searchText = searchText
@@ -18,7 +25,9 @@ class ProductListViewModel {
     func searchProductWithText(){
         let resource = ProductListResource()
         resource.getProductListBySearchText(searchText: searchText) { result in
-            debugPrint(result)
+            DispatchQueue.main.async {
+                self.delegate?.didReceiveProductList(response: result!)
+            }
         }
     }
 }

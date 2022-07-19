@@ -22,6 +22,13 @@
 		177816F9287C9E9500A1C9E2 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177816F8287C9E9500A1C9E2 /* HttpUtility.swift */; };
 		177816FC287CBE5C00A1C9E2 /* ProductListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177816FB287CBE5C00A1C9E2 /* ProductListResource.swift */; };
 		17781700287CC21900A1C9E2 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177816FF287CC21900A1C9E2 /* ProductData.swift */; };
+		17781703287D7BB600A1C9E2 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17781702287D7BB600A1C9E2 /* ProductsCollectionViewCell.swift */; };
+		17781706287D82A900A1C9E2 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17781705287D82A900A1C9E2 /* Extentions.swift */; };
+		17781708287DB6FE00A1C9E2 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17781707287DB6FE00A1C9E2 /* LazyImageView.swift */; };
+		1778170E287EED3600A1C9E2 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778170D287EED3500A1C9E2 /* WebViewViewController.swift */; };
+		17781710287EEE3D00A1C9E2 /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778170F287EEE3D00A1C9E2 /* WebViewViewModel.swift */; };
+		1778171328874D3200A1C9E2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778171228874D3100A1C9E2 /* ProductDetailViewController.swift */; };
+		1778171528874D9400A1C9E2 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778171428874D9400A1C9E2 /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,13 @@
 		177816F8287C9E9500A1C9E2 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		177816FB287CBE5C00A1C9E2 /* ProductListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListResource.swift; sourceTree = "<group>"; };
 		177816FF287CC21900A1C9E2 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
+		17781702287D7BB600A1C9E2 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		17781705287D82A900A1C9E2 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		17781707287DB6FE00A1C9E2 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
+		1778170D287EED3500A1C9E2 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		1778170F287EEE3D00A1C9E2 /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
+		1778171228874D3100A1C9E2 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		1778171428874D9400A1C9E2 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,8 @@
 		177816BC287C749A00A1C9E2 /* DeBijenkorf */ = {
 			isa = PBXGroup;
 			children = (
+				177817112887449F00A1C9E2 /* Constants */,
+				17781704287D829400A1C9E2 /* Utils */,
 				177816FD287CC14600A1C9E2 /* Models */,
 				177816FA287CBDD300A1C9E2 /* DataResources */,
 				177816F7287C9E4200A1C9E2 /* Network */,
@@ -122,7 +138,6 @@
 				177816C6287C749B00A1C9E2 /* Assets.xcassets */,
 				177816C8287C749B00A1C9E2 /* LaunchScreen.storyboard */,
 				177816CB287C749B00A1C9E2 /* Info.plist */,
-				177816F5287C934400A1C9E2 /* Constants.swift */,
 			);
 			path = DeBijenkorf;
 			sourceTree = "<group>";
@@ -147,8 +162,11 @@
 		177816ED287C833500A1C9E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17781701287D7B7000A1C9E2 /* CollectionViewCell */,
 				177816C1287C749A00A1C9E2 /* SearchViewController.swift */,
 				177816EF287C877200A1C9E2 /* ProductListViewController.swift */,
+				1778170D287EED3500A1C9E2 /* WebViewViewController.swift */,
+				1778171228874D3100A1C9E2 /* ProductDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				177816F1287C879C00A1C9E2 /* ProductListViewModel.swift */,
+				1778170F287EEE3D00A1C9E2 /* WebViewViewModel.swift */,
+				1778171428874D9400A1C9E2 /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -191,6 +211,31 @@
 				177816FF287CC21900A1C9E2 /* ProductData.swift */,
 			);
 			path = ProductSearchResponse;
+			sourceTree = "<group>";
+		};
+		17781701287D7B7000A1C9E2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				17781702287D7BB600A1C9E2 /* ProductsCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		17781704287D829400A1C9E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				17781705287D82A900A1C9E2 /* Extentions.swift */,
+				17781707287DB6FE00A1C9E2 /* LazyImageView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		177817112887449F00A1C9E2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				177816F5287C934400A1C9E2 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +369,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17781708287DB6FE00A1C9E2 /* LazyImageView.swift in Sources */,
 				177816C2287C749A00A1C9E2 /* SearchViewController.swift in Sources */,
+				1778171328874D3200A1C9E2 /* ProductDetailViewController.swift in Sources */,
 				177816FC287CBE5C00A1C9E2 /* ProductListResource.swift in Sources */,
 				17781700287CC21900A1C9E2 /* ProductData.swift in Sources */,
+				17781706287D82A900A1C9E2 /* Extentions.swift in Sources */,
 				177816F2287C879C00A1C9E2 /* ProductListViewModel.swift in Sources */,
+				1778171528874D9400A1C9E2 /* ProductDetailViewModel.swift in Sources */,
 				177816BE287C749A00A1C9E2 /* AppDelegate.swift in Sources */,
 				177816F0287C877200A1C9E2 /* ProductListViewController.swift in Sources */,
+				1778170E287EED3600A1C9E2 /* WebViewViewController.swift in Sources */,
+				17781703287D7BB600A1C9E2 /* ProductsCollectionViewCell.swift in Sources */,
+				17781710287EEE3D00A1C9E2 /* WebViewViewModel.swift in Sources */,
 				177816C0287C749A00A1C9E2 /* SceneDelegate.swift in Sources */,
 				177816F6287C934400A1C9E2 /* Constants.swift in Sources */,
 				177816F9287C9E9500A1C9E2 /* HttpUtility.swift in Sources */,
