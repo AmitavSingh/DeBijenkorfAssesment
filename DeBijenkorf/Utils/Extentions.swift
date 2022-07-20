@@ -37,7 +37,7 @@ extension UICollectionView {
 }
 
 extension URL {
-    var sanitise: URL {
+    var makeHttps: URL {
         if var components = URLComponents(url: self, resolvingAgainstBaseURL: false) {
             if components.scheme == nil {
                 components.scheme = "https"
@@ -47,3 +47,19 @@ extension URL {
         return self
     }
 }
+
+extension UINavigationItem {
+    func addNavBarImage(navigationController: UINavigationController?) {
+            let navController = navigationController!
+            let image = UIImage(named: "title_logo")
+            let imageView = UIImageView(image: image)
+            let bannerWidth = navController.navigationBar.frame.size.width
+            let bannerHeight = navController.navigationBar.frame.size.height
+            let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+            let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+            imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+            imageView.contentMode = .scaleAspectFit
+            self.titleView = imageView
+        }
+}
+

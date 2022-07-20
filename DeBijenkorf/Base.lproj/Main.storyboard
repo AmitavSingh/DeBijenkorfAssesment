@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DI3-nV-XmG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kSP-UK-FZW">
                                     <size key="itemSize" width="191" height="394"/>
@@ -149,8 +149,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DI3-nV-XmG" firstAttribute="bottom" secondItem="VAp-Hv-S9Q" secondAttribute="bottom" id="JpJ-0Z-8qt"/>
-                            <constraint firstItem="DI3-nV-XmG" firstAttribute="top" secondItem="VAp-Hv-S9Q" secondAttribute="top" id="VbD-DV-OLM"/>
                             <constraint firstItem="DI3-nV-XmG" firstAttribute="leading" secondItem="VAp-Hv-S9Q" secondAttribute="leading" id="XxE-h9-PXK"/>
+                            <constraint firstItem="DI3-nV-XmG" firstAttribute="top" secondItem="VAp-Hv-S9Q" secondAttribute="top" constant="20" id="tpu-7w-DI4"/>
                             <constraint firstItem="DI3-nV-XmG" firstAttribute="trailing" secondItem="VAp-Hv-S9Q" secondAttribute="trailing" id="zej-D3-BzA"/>
                         </constraints>
                     </view>

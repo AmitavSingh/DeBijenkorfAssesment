@@ -16,7 +16,7 @@ class WebViewViewController: UIViewController {
     
     static func initWith(viewModel: WebViewViewModel) -> WebViewViewController {
         let storyboard = UIStoryboard(name: StoryBoards.Main, bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier:"WebViewViewController")
+        if let vc = storyboard.instantiateViewController(withIdentifier: StoryBoards.WebViewViewController)
             as? WebViewViewController
         {
             vc.viewModel = viewModel
@@ -27,7 +27,7 @@ class WebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.addNavBarImage(navigationController: navigationController)
         self.webView.load(URLRequest(url: URL(string: viewModel!.urlLink)!))
     }
-
 }

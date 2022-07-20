@@ -24,7 +24,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
             return
         }
         
-        let imageUrl = URL(string: productImage.url!)?.sanitise
+        let imageUrl = URL(string: productImage.url!)?.makeHttps
         productImageView.loadImage(imageUrl: imageUrl!, placeHolderImage: "image_not_found")
        
         

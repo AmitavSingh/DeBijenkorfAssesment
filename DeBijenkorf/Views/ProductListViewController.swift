@@ -17,7 +17,7 @@ class ProductListViewController: UIViewController {
     
     static func initWith(viewModel: ProductListViewModel) -> ProductListViewController {
         let storyboard = UIStoryboard(name: StoryBoards.Main, bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier:"ProductListViewController")
+        if let vc = storyboard.instantiateViewController(withIdentifier: StoryBoards.ProductListViewController)
             as? ProductListViewController
         {
             vc.viewModel = viewModel
@@ -29,27 +29,14 @@ class ProductListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addNavBarImage()
+        navigationItem.addNavBarImage(navigationController: navigationController)
+        
         viewModel?.searchProductWithText()
         viewModel?.delegate = self
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
-    
-    func addNavBarImage() {
-            let navController = navigationController!
-            let image = UIImage(named: "title_logo")
-            let imageView = UIImageView(image: image)
-            let bannerWidth = navController.navigationBar.frame.size.width
-            let bannerHeight = navController.navigationBar.frame.size.height
-            let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
-            let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
-            imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
-            imageView.contentMode = .scaleAspectFit
-            navigationItem.titleView = imageView
-        }
-    
 }
 
 extension ProductListViewController: ProductListViewModelDelegate{

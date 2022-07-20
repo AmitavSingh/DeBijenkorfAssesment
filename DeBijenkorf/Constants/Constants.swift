@@ -10,6 +10,9 @@ import Foundation
 
 enum StoryBoards {
     static let Main = "Main"
+    static let ProductDetailViewController = "ProductDetailViewController"
+    static let WebViewViewController = "WebViewViewController"
+    static let ProductListViewController = "ProductListViewController"
 }
 
 enum ApiEndpoints
